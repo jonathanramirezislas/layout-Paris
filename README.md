@@ -61,4 +61,4 @@ The MIT License (MIT)
 
 ## Contributing
 
-You're free to contribute to this project by submitting [issues](https://github.com/jonathanramirezislas/Jouragenda-for-appointmentsnalApp/issues) and/or [pull requests](https://github.com/jonathanramirezislas/agenda-for-appointments/pulls).
+You're free to contribute to this project by submitting [issues](https://github.com/jonathanramirezislas/layout-Paris/issues) and/or [pull requests](https://github.com/jonathanramirezislas/layout-Paris/pulls).
