@@ -1,113 +1,100 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import {StyleSheet, Text, View, Image, ScrollView} from 'react-native';
+import {baseUrl} from './shared/baseUrl';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-const App: () => React$Node = () => {
+const App = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
+      <ScrollView>
+        <View style={{flexDirection: 'row'}}>
+          <Image
+            style={styles.banner}
+            source={{uri: baseUrl + 'bg_tdtfqh.jpg'}}
+          />
+        </View>
+        <View style={styles.contenedor}>
+          <Text style={styles.titulo}>Qué hacer en Paris</Text>
+          <ScrollView horizontal>
+            <View>
+              <Image
+                style={styles.ciudad}
+                source={{uri: baseUrl + 'actividad1_axqvf4.jpg'}}
+              />
             </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
+            <View>
+              <Image
+                style={styles.ciudad}
+                source={{uri: baseUrl + 'actividad2_mrqsql.jpg'}}
+              />
             </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
+            <View>
+              <Image
+                style={styles.ciudad}
+                source={{uri: baseUrl + 'actividad3_uc4cub.jpg'}}
+              />
             </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
+            <View>
+              <Image
+                style={styles.ciudad}
+                source={{uri: baseUrl + 'actividad4_zqucve.jpg'}}
+              />
             </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
+            <View>
+              <Image
+                style={styles.ciudad}
+                source={{uri: baseUrl + 'actividad5_vznnmz.jpg'}}
+              />
             </View>
-            <LearnMoreLinks />
+          </ScrollView>
+          <Text style={styles.titulo}>Los Mejores Alojamientos</Text>
+          <View>
+            <View>
+              <Image
+                style={styles.mejores}
+                source={{uri: baseUrl + 'mejores1_yxbzgo.jpg'}}
+              />
+            </View>
+            <View>
+              <Image
+                style={styles.mejores}
+                source={{uri: baseUrl + 'mejores2_xm2jku.jpg'}}
+              />
+            </View>
+            <View>
+              <Image
+                style={styles.mejores}
+                source={{uri: baseUrl + 'mejores3_nwlsot.jpg'}}
+              />
+            </View>
           </View>
-        </ScrollView>
-      </SafeAreaView>
+        </View>
+      </ScrollView>
     </>
   );
 };
 
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
+  banner: {
+    height: 250,
+    flex: 1,
   },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
+  titulo: {
+    fontWeight: 'bold',
     fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
+    marginVertical: 20,
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
+  contenedor: {
+    marginHorizontal: 10,
   },
-  highlight: {
-    fontWeight: '700',
+  ciudad: {
+    width: 250,
+    height: 300,
+    marginRight: 10,
   },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
+    mejores: {
+    width: '100%',
+    height: 200,
+    marginVertical: 5
   },
 });
 
