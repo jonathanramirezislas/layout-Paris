@@ -67,6 +67,35 @@ const App = () => {
               />
             </View>
           </View>
+      
+        <Text style={styles.titulo}>Hospedajes en LA</Text>
+
+        <View style={styles.listado}>
+          <View style={styles.listadoItem}>
+            <Image
+              style={styles.mejores}
+              source={{uri: baseUrl + 'hospedaje1_pee4f0.jpg'}}
+            />
+          </View>
+          <View style={styles.listadoItem}>
+            <Image
+              style={styles.mejores}
+              source={{uri: baseUrl + 'hospedaje2_hcauom.jpg'}}
+            />
+          </View>
+          <View style={styles.listadoItem}>
+            <Image
+              style={styles.mejores}
+              source={{uri: baseUrl + 'hospedaje3_li47id.jpg'}}
+            />
+          </View>
+          <View style={styles.listadoItem}>
+            <Image
+              style={styles.mejores}
+              source={{uri: baseUrl + 'hospedaje4_zacmpy.jpg'}}
+            />
+          </View>
+        </View>
         </View>
       </ScrollView>
     </>
@@ -89,13 +118,21 @@ const styles = StyleSheet.create({
   ciudad: {
     width: 250,
     height: 300,
-    marginRight: 10,
+    marginRight: 10
   },
-    mejores: {
+  mejores: {
     width: '100%',
     height: 200,
     marginVertical: 5
   },
+  listado: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between'
+  },
+  listadoItem: {
+    flexBasis: '49%'
+  }
 });
 
 export default App;
